@@ -81,10 +81,13 @@ Run IntelliJ IDEA. On home screen select ``Check out from version control`` and 
 
 When you will be asked for repository url add enter ``git@github.com:maclor/QualityExcites2018.git``, then clone repository. IDE will ask if you want to create project basing on the downloaded sources, accept this. You should see screen like this:
 ![idea import project](images/idea_import_project.PNG)
+
 Please select options like on screenshot - iport project from external model and select maven. In next steps you will see screen like this one:
 ![idea import project](images/idea_import_project_maven.PNG)
+
 On this view please check _Import Maven project automatically_.
 You will be also asked to select JDK. In this case you should to click green plus icon and select path where you have installed Java JDK.
 When project import will be done, please open IntelliJ IDEA settings (if you don't know how - press _crtl+shift+a_ and type settings), then in the top left corner in search enter _maven_. You should see screen like this:
 ![idea setting maven](images/idea_setting_maven.PNG)
+
 Please change _Maven home directory_ - click _..._ and select maven path (this one which you have installed).
