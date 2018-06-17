@@ -63,7 +63,7 @@ Connection screen with TightVNC Viewer:
 Node desktop:
 ![node desktop](images/node_desktop.png)
 
-You can also open in your browser [http://localhost:4444/grid/console](http://localhost:4444/grid/console), you should see something like this:
+You can also open in your browser [http://localhost:4444/grid/console](http://localhost:4444/grid/console), you should see something like this (but with one firefox instance available):
 ![grid console](images/grid_console.png)
 
 ### Option without docker
