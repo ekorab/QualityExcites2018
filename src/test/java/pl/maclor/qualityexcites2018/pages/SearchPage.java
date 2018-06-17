@@ -1,4 +1,4 @@
-package ch.em.pages;
+package pl.maclor.qualityexcites2018.pages;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -6,7 +6,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl("/")
-public class GooglePage extends PageObject {
+public class SearchPage extends PageObject {
 
     @FindBy(id = "lst-ib")
     private WebElementFacade searchInput;

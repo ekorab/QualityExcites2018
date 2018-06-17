@@ -1,9 +1,9 @@
-package ch.em.steps.login;
+package pl.maclor.qualityexcites2018.steps.login;
 
-import ch.em.pages.GooglePage;
+import pl.maclor.qualityexcites2018.pages.SearchPage;
 
 public class GoogleSteps {
-    private GooglePage googlePage;
+    private SearchPage googlePage;
 
     public void searchInGoogle(final String phrase) {
         googlePage.enterSearchPhrase(phrase);

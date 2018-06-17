@@ -1,4 +1,4 @@
-package ch.em;
+package pl.maclor.qualityexcites2018;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;

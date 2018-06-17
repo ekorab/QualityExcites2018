@@ -65,4 +65,5 @@ Go to [download page](https://www.jetbrains.com/idea/download/#section=windows),
 #### Importing and configuring project
 Run IntelliJ IDEA. On home screen select ``Check out from version control`` and then select git:
 ![idea home screen](images/idea_home.png)
+
 When you will be asked for repository url add enter ``git@github.com:maclor/QualityExcites2018.git``.
