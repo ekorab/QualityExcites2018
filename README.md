@@ -83,6 +83,7 @@ When you will be asked for repository url add enter ``git@github.com:maclor/Qual
 ![idea import project](images/idea_import_project.PNG)
 
 Please select options like on screenshot - iport project from external model and select maven. In next steps you will see screen like this one:
+
 ![idea import project](images/idea_import_project_maven.PNG)
 
 On this view please check _Import Maven project automatically_.
