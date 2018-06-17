@@ -41,7 +41,7 @@ You can follow instructions from [this video](https://www.youtube.com/watch?v=vU
 Link to installer download page - [click](https://maven.apache.org/download.cgi).
 
 ## Run selenium hub and node images
-I highly recoment using option with docker (just because it's more comfortable and easy), but in some cases it's not possible to use it. This case occurs when you are not able to install docker which requires Windows 10 Pro. So my suggestion is just to try installing docker and then if something is wrong switching to second option. 
+I highly recommend using option with docker (just because it's more comfortable and easy), but in some cases it's not possible to use it. This case occurs when you are not able to install docker which requires Windows 10 Pro. So my suggestion is just to try installing docker and then if something is wrong switching to second option. 
 ### Option with docker
 #### Installing docker
 We'll use docker to setup test run environment (selenium grid and node). Please follow [this instruction](https://docs.docker.com/docker-for-windows/install/#about-windows-containers).
@@ -67,6 +67,46 @@ You can also open in your browser [http://localhost:4444/grid/console](http://lo
 ![grid console](images/grid_console.png)
 
 ### Option without docker
+You have to download Selenium jar using [this link](https://goo.gl/tbd1NS). You can run selenium-hub now, by opening console in location when you downloaded file and running command:
+```
+java -jar selenium-server-standalone-3.12.0.jar -role hub
+```
+After that you should see something like this:
+```
+λ java -jar selenium-server-standalone-3.12.0.jar -role hub
+21:02:22.188 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.12.0', revision: '7c6e0b3'
+21:02:22.203 INFO [GridLauncherV3$2.launch] - Launching Selenium Grid hub on port 4444
+2018-06-17 21:02:22.859:INFO::main: Logging initialized @1831ms to org.seleniumhq.jetty9.util.log.StdErrLog
+21:02:23.778 INFO [Hub.start] - Selenium Grid hub is up and running
+21:02:23.782 INFO [Hub.start] - Nodes should register to http://10.103.65.14:4444/grid/register/
+21:02:23.783 INFO [Hub.start] - Clients should connect to http://10.103.65.14:4444/wd/hub
+```
+You can also open [http://localhost:4444/grid/console](http://localhost:4444/grid/console) in your browser and you should see Selenium header.
+Now it's time to configure and run node. To run test on the firefox you have to download and extract [gecko driver](https://github.com/mozilla/geckodriver/releases). Now you can run node passing path where you have extracted geckodriver:
+```
+java -Dwebdriver.gecko.driver="C:\geckodriver.exe" -jar selenium-server-standalone-3.12.0.jar -role node -hub http://localhost:4444/grid/register
+```
+You should see output like this:
+```
+λ java -Dwebdriver.gecko.driver="C:\geckodriver.exe" -jar selenium-server-standalone-3.12.0.jar -role node -hub http://localhost:4444/grid/register
+21:28:19.458 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.12.0', revision: '7c6e0b3'
+21:28:19.530 INFO [GridLauncherV3$3.launch] - Launching a Selenium Grid node on port 34442
+2018-06-17 21:28:20.649:INFO::main: Logging initialized @2406ms to org.seleniumhq.jetty9.util.log.StdErrLog
+21:28:21.054 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 34442
+21:28:21.056 INFO [GridLauncherV3$3.launch] - Selenium Grid node is up and ready to register to the hub
+21:28:21.289 INFO [SelfRegisteringRemote$1.run] - Starting auto registration thread. Will try to register every 5000 ms.
+21:28:21.293 INFO [SelfRegisteringRemote.registerToHub] - Registering the node to the hub: http://localhost:4444/grid/register
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.openqa.selenium.json.BeanToJsonConverter (file:/C:/Users/mlo/Downloads/selenium-server-standalone-3.12.0.jar) to method sun.reflect.annotation.AnnotatedTypeFactory$AnnotatedTypeBaseImpl.getDeclaredAnnotations()
+WARNING: Please consider reporting this to the maintainers of org.openqa.selenium.json.BeanToJsonConverter
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+21:28:22.317 INFO [SelfRegisteringRemote.registerToHub] - Updating the node configuration from the hub
+21:28:22.464 INFO [SelfRegisteringRemote.registerToHub] - The node is registered to the hub and ready to use
+```
+You can also open in your browser [http://localhost:4444/grid/console](http://localhost:4444/grid/console), you should see something like this:
+![grid console](images/grid_console.png)
+
 ## Installing git
 Open [git download page](https://git-scm.com/downloads), download installer and run it. Follow installers instructions. If git is correctly installed then after putting ``git --version`` you should see something like this:
 ```
@@ -92,3 +132,4 @@ When project import will be done, please open IntelliJ IDEA settings (if you don
 ![idea setting maven](images/idea_setting_maven.PNG)
 
 Please change _Maven home directory_ - click _..._ and select maven path (this one which you have installed).
+When project is properly imported please click icon in bottom left corner and select _Maven projects_. On the right side _Maven projects_ menu will appear. Expand _lifecycle_ and double click _verify_. On the bottom of window terminal will appear. In this window you can track test progress. In VNC window you should be able to see running test. If you don't use docker then firefox window should appear. If test runs and reslt is ok, then you have configured everythign properly :) Well done!
