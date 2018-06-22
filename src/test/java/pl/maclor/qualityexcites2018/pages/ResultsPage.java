@@ -12,7 +12,7 @@ import static java.util.stream.Collectors.toList;
 public class ResultsPage extends PageObject {
 
     @FindBy(xpath = "//div[@class='rc']//h3/a")
-    List<WebElementFacade> searchResultsLinks;
+    private List<WebElementFacade> searchResultsLinks;
 
     public List<String> getSearchResultsHeaders() {
         return searchResultsLinks.stream()
