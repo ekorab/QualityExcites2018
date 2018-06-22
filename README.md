@@ -137,3 +137,7 @@ When project is properly imported please click icon in bottom left corner and se
 # Backup grid servers
 1. 54.37.205.203 4444 5901
 1. 54.37.205.203 4445 5902
+1. 51.38.130.252 4444 5901
+1. 51.38.130.252 4445 5902
+1. 51.38.130.252 4446 5903
+1. 51.38.130.252 4447 5904
