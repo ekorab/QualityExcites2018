@@ -133,3 +133,7 @@ When project import will be done, please open IntelliJ IDEA settings (if you don
 
 Please change _Maven home directory_ - click _..._ and select maven path (this one which you have installed).
 When project is properly imported please click icon in bottom left corner and select _Maven projects_. On the right side _Maven projects_ menu will appear. Expand _lifecycle_ and double click _verify_. On the bottom of window terminal will appear. In this window you can track test progress. In VNC window you should be able to see running test. If you don't use docker then firefox window should appear. If test runs and reslt is ok, then you have configured everythign properly :) Well done!
+
+# Backup grid servers
+1. 54.37.205.203 4444 5901
+1. 54.37.205.203 4445 5902
