@@ -1,4 +1,4 @@
-package pl.maclor.qualityexcites2018.pages;
+package pl.qualityexcites2018.pages;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;

@@ -1,13 +1,13 @@
-package pl.maclor.qualityexcites2018.features.cart;
+package pl.qualityexcites2018.features.cart;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import org.assertj.core.api.SoftAssertions;
-import pl.maclor.qualityexcites2018.pages.ResultsPage;
-import pl.maclor.qualityexcites2018.pages.SearchPage;
-import pl.maclor.qualityexcites2018.steps.login.GoogleSteps;
+import pl.qualityexcites2018.pages.ResultsPage;
+import pl.qualityexcites2018.pages.SearchPage;
+import pl.qualityexcites2018.steps.login.GoogleSteps;
 
 public class GoogleFeatures {
 

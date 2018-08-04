@@ -1,6 +1,6 @@
-package pl.maclor.qualityexcites2018.steps.login;
+package pl.qualityexcites2018.steps.login;
 
-import pl.maclor.qualityexcites2018.pages.SearchPage;
+import pl.qualityexcites2018.pages.SearchPage;
 
 public class GoogleSteps {
     private SearchPage googlePage;
